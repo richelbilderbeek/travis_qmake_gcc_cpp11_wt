@@ -13,6 +13,10 @@ addons:
     - libboost1.55-all-dev
     - libwt-dev
     - witty-dev
+    - witty
+    - witty-doc
+    - witty-dbg
+    - witty-examples
 
 before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
