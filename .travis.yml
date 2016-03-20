@@ -10,7 +10,8 @@ addons:
     packages:
     - gcc-5
     - g++-5
-    - libboost1.55-all-dev
+    #- libboost1.55-all-dev
+    - libboost1.46-all-dev
     - libwt-dev
     - witty-dev
     - witty
@@ -24,6 +25,7 @@ before_install:
 
 install: 
   - sudo apt-get install -qq g++-5
+  - sudo apt-get install libboost-serialization1.46-dev
   - sudo apt-get install libboost-date-time1.46-dev
   - sudo apt-get install libboost-date-time-dev
   - sudo apt-get install libboost-filesystem-dev
@@ -34,12 +36,13 @@ install:
   - sudo apt-get install libwt-dev
   - sudo apt-get install witty-dev
   #- sudo apt-get install libboost1.46-dev
-  #- sudo apt-get install libboost-serialization1.46-dev
   #- sudo apt-get install libboost1.55-dev
   #- sudo apt-get install libwt-dev
   #- sudo apt-get install -qq witty-dev
 
 script: ./build.sh
+
+
 
 
 
