@@ -1,5 +1,6 @@
 language: cpp
 compiler: gcc
+sudo: true
 
 addons:
   apt:
@@ -17,7 +18,9 @@ before_install:
 
 install: 
   - sudo apt-get install -qq g++-5
-  - sudo apt-get install witty-dev
+  - sudo apt-get install libwt-dev
+
+#  - sudo apt-get install witty-dev
 
 script: ./build.sh
 
