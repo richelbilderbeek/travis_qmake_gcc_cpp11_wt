@@ -13,7 +13,7 @@ addons:
     #- libboost1.55-all-dev
     #- libboost1.46-all-dev
     #- libwt-dev
-    #- witty-dev
+    - witty-dev
     #- witty
     #- witty-doc
     #- witty-dbg
@@ -21,6 +21,7 @@ addons:
 
 before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo add-apt-repository -y ppa:pgquiles/wt
   - sudo apt-get update -qq
 
 install: 
