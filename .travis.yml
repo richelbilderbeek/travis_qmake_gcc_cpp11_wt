@@ -12,7 +12,7 @@ addons:
     - g++-5
     - libboost1.55-all-dev
     #- libboost1.46-all-dev
-    #- libwt-dev
+    - libwt-dev
     - witty-dev
     #- witty
     #- witty-doc
