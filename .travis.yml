@@ -18,10 +18,6 @@ install:
   - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-5 90
   # Wt
   - sudo apt-get install witty witty-dbg witty-dev witty-doc
-  # Codecov
-  - sudo pip install codecov
-  # OCLint
-  - ./install_oclint.sh
 
 # Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
 before_script:
@@ -35,11 +31,3 @@ script:
   - ./travis_qmake_gcc_cpp11_wt
   - sleep 10
   - sudo killall travis_qmake_gcc_cpp11_wt
-  # Get code coverage
-  - ./get_code_cov.sh
-  - codecov
-  # Call OCLint
-  - ./do_oclint.sh
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
