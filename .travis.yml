@@ -28,6 +28,6 @@ before_script:
 script: 
   - qmake
   - make
-  - ./travis_qmake_gcc_cpp11_wt
+  - ./travis_qmake_gcc_cpp11_wt &
   - sleep 10
   - sudo killall travis_qmake_gcc_cpp11_wt
